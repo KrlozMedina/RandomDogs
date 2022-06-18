@@ -11,6 +11,8 @@ html{
 body{
     width: 100%;
     display: inline;
+
+   /* background-color: rgb(238, 210, 168); */
     background-color: #1c1e21;
 }
 
@@ -79,7 +81,6 @@ button:hover{
 #favourite{
    width: 100%;
    display: inline-block;
-   /* background-color: rgb(238, 210, 168); */
    border-top: solid 5px gray;
    margin-top: 5rem;
 }
