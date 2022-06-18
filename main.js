@@ -66,15 +66,15 @@ async function getFavouriteDog(){
         data.forEach(dog => {
             const article = document.createElement('article');
             const img = document.createElement('img');
-            const button = document.createElement('button');
-            const buttonText = document.createTextNode('Eliminar perro de la lista');
+            const span = document.createElement('span');
+            const spanText = document.createTextNode('💔');
 
             img.src = dog.image.url;
-            img.width = 150;
-            button.appendChild(buttonText);
-            button.onclick = () => deleteFavouriteDog(dog.id);
+            // img.width = 150;
+            span.appendChild(spanText);
+            span.onclick = () => deleteFavouriteDog(dog.id);
             article.appendChild(img);
-            article.appendChild(button);
+            article.appendChild(span);
             section.appendChild(article);          
         });
     }
