@@ -85,11 +85,12 @@ button:hover{
 }
 
 #favourite h2{
-    width:fit-content;
+    width:min-content;
     font-size: 5rem;
     color: rgb(13, 121, 148);
     margin: 3rem auto;
     font-weight: bold;
+    text-align: center;
 }
 
 #favourite article{
@@ -106,4 +107,13 @@ button:hover{
     width: 100%;
     /* max-height: 30rem; */
     border: solid 3px black;
+}
+
+footer{
+    width: fit-content;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgb(13, 121, 148);
+    margin: 3rem auto;
+    font-family: cursive;
 }
