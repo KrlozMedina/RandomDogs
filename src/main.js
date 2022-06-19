@@ -56,12 +56,12 @@ async function getFavouriteDog(){
     if (res.status!==200){
         console.log('Hubo un error', res.status)
     } else {
-        const section = document.getElementById("favourite");
+        const section = document.getElementById("favourite-container");
         section.innerHTML = '';
-        const h2 = document.createElement('h2');
-        const h2Text = document.createTextNode('Perros favoritos');
-        h2.appendChild(h2Text);
-        section.appendChild(h2);
+        // const h2 = document.createElement('h2');
+        // const h2Text = document.createTextNode('Perros favoritos');
+        // h2.appendChild(h2Text);
+        // section.appendChild(h2);
 
         data.forEach(dog => {
             const article = document.createElement('article');
