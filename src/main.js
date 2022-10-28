@@ -3,6 +3,9 @@ const API_URL_Favourite = 'https://api.thedogapi.com/v1/favourites';
 const API_URL_Upload = 'https://api.thedogapi.com/v1/images/upload';
 const API_KEY = '719dcbe5-1c51-4085-8ecb-220e6cef910c';
 
+let menu = false;
+
+
 // fetch(API_URL)
 //     .then(res => res.json())
 //     .then(data => {
@@ -10,6 +13,19 @@ const API_KEY = '719dcbe5-1c51-4085-8ecb-220e6cef910c';
 //         img.src = data[0].url;
 //     }
 // );
+
+function handleMenu(){
+    const menuSpan = document.getElementById('menu');
+    if (menu) {
+        menuSpan.classList.remove('header--nav');
+        menuSpan.classList.add('header--nav-none');
+
+    } else {
+        menuSpan.classList.add('header--nav')
+        menuSpan.classList.remove('header--nav-none')
+    }
+    menu = !menu;
+}
 
 async function getDogImage(){
     const res = await fetch(API_URL);

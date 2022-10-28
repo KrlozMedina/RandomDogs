@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eligue tu mascota favorita de lo aleatorio">
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Ramdom Dogs</title>
 </head>
 <body>
-    <header>Random Dogs</header>
+    <header class="header">
+        <span class="header--menu" onClick="handleMenu()">
+            <span class="material-symbols-outlined">
+              menu
+            </span>
+        </span>
+
+        <nav id="menu" class='header--nav-none'>
+            <ul>
+                <li>
+                    <a href="https://krlozmedina.com/#home">Inicio</a>
+                    <a href="https://krlozmedina.com/#aboutme">Sobre mi</a>
+                    <a href="https://krlozmedina.com/#projects">Proyectos</a>
+                    <a href="https://krlozmedina.com/#education">Educacion</a>
+                    <a href="https://krlozmedina.com/#contactme">Contactame</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <section class="random">
+        <section class="random" id="init">
             <article class="dog">
                 <img id="dog1" alt="Foto de un perro desde una API">
                 <span id="likeDog1">❤️</span>
@@ -29,7 +56,11 @@
             </article>
         </section>
 
-        <button onclick="getDogImage()">Otros perros!!</button>
+        <button onclick="getDogImage()">
+            <a href="#init">
+                Otros perros!!
+            </a>
+        </button>
         
         <!-- <section id="uploading">
             <h2>Sube la foto de tu perro</h2>
@@ -44,7 +75,19 @@
             <div id="favourite-container"></div>
         </section>
     </main>
-    <footer>KrlozMedina</footer>
+    
+    <footer>
+        <div class="footer-container">
+            <a href="https://www.linkedin.com/in/carlos-alidio-medina-l%C3%B3pez-62406991/" class="footer-logo linkedin"></a>
+            <a href="https://github.com/KrlozMedina" class="footer-logo github"></a>    
+            <a href="https://www.youtube.com/channel/UCwr2Oy0BSvLWbukMAi_Nk7g" class="footer-logo youtube"></a>
+            <a href="https://twitter.com/Krloz_Medina" class="footer-logo twitter"></a>
+            <a href="https://www.facebook.com/k.medina16" class="footer-logo facebook"></a>
+            <a href="https://www.instagram.com/krloz_medina/" class="footer-logo instagram"></a>
+            <a href="https://www.tiktok.com/@krlozmedina" class="footer-logo tiktok"></a>
+        </div>
+    </footer>
+
     <script src="./src/main.js"></script>
 </body>
 </html>
